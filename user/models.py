@@ -11,7 +11,7 @@ class Profile(models.Model):
     def __str__(self):
         return self.user.username
 
-class myuploadfile(models.Model):
+class UserUploadedFile(models.Model):
     user = models.ForeignKey(Profile,on_delete=models.CASCADE,null=True)
     f_name = models.CharField(max_length=255)
     myfiles = models.FileField(upload_to="")

@@ -167,7 +167,7 @@ def verify(request, auth_token):
 def error_page(request):
     return render(request, 'error.html')
 
-def Dangxuat(request):
+def log_out(request):
     logout(request)
     messages.success(request,'Đăng xuất thành công')
     return redirect('/accounts/login')
@@ -182,56 +182,56 @@ def send_mail_after_registration(email, auth_token):
 
 # https://accounts.google.com/DisplayUnlockCaptcha
 # https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4MKvsNPAkDdvjmxFXA3SG6EQk2YWe6JqfK4FVVjvrc3yuVMPlsEqpRqP2bDFwR-vAtiiUVL4sT3xFhWMCMsptJ1EZ_xJw
-def myfile(request):
-    nd = Profile.objects.get(user__id=request.user.id)
+def display_file(request):
+    request_user = Profile.objects.get(user__id=request.user.id)
     context = {
-    "nd":nd
+    "request_user": request_user
     }
-    return render(request, "myfile.html", context)
+    return render(request, "display_file.html", context)
 
-def uploadfile(request):
-    nd = Profile.objects.get(user__id=request.user.id)
-    mf=myuploadfile.objects.all()
+def upload_file(request):
+    request_user = Profile.objects.get(user__id=request.user.id)
+    user_uploaded_files = UserUploadedFile.objects.all()
     id=request.user.id
-    for i in mf:
-        i.delete()
+    for user_uploaded_file in user_uploaded_files:
+        user_uploaded_file.delete()
     if request.method == "POST":
         name = request.POST.get("filename")
-        myfile = request.FILES.getlist("uploadfiles")
+        uploaded_files = request.FILES.getlist("uploadfiles")
         urlk= str(datetime.today().year)+ str(datetime.today().month)+ str(datetime.today().day)+str(datetime.now().hour)+str(datetime.now().minute)+str(datetime.now().second)+ str(id)
         print(urlk)
         Folder='./media/'+urlk
         os.makedirs(Folder)
         gauth = GoogleAuth()
         drive = GoogleDrive(gauth)
-        for f in myfile:
-            myuploadfile(f_name=name, myfiles=f,user=nd).save()
-        for f in myfile:
-            b=str(f)
-            global to
-            fr='./media/'+b
-            to='./media/'+urlk
-            shutil.move(fr, to)
+        for uploaded_file in uploaded_files:
+            UserUploadedFile(f_name=name, myfiles=uploaded_file,user=request_user).save()
+        for uploaded_file in uploaded_files:
+            uploaded_file_name =str(uploaded_file)
+            global server_store_path
+            uploaded_file_path ='./media/' + uploaded_file_name
+            server_store_path = './media/' + urlk
+            shutil.move(uploaded_file_path, server_store_path)
         entries = os.scandir(Folder)
-        f = []
+        upload_files = []
         for entry in entries:
             print(entry.name)
             k = str(entry.name)
-            f.append(os.path.join(Folder, k))
+            upload_files.append(os.path.join(Folder, k))
         folder_name = urlk
         folder = drive.CreateFile({'title': folder_name, 'mimeType': 'application/vnd.google-apps.folder'})
         folder.Upload()
         print('File ID: %s' % folder.get('id'))
-        a = str(folder.get('id'))
-        for upload_file in f:
-            gfile = drive.CreateFile({'parents': [{'id': a}]})
+        folder_id = str(folder.get('id'))
+        for upload_file in upload_files:
+            gfile = drive.CreateFile({'parents': [{'id': folder_id}]})
             gfile.SetContentFile(upload_file)
             gfile.Upload()  # Upload the file.
             print('success')
-        a = myuploadfile.objects.all()
-        a.delete()
-        data_path = to
-        # export result to other folde
+        folder_contents = UserUploadedFile.objects.all()
+        folder_contents.delete()
+        data_path = server_store_path
+        # export result to other folder
         # open dicom files
         g = glob(data_path + '/*.dcm')
         output_path = working_path = 'test'

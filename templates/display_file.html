@@ -19,9 +19,9 @@
         <button type="submit" >File Upload</button>
     </form>
 
-    {% for d in nd.myuploadfile_set.all %}
+    {% for uploaded_file in request_user.myuploadfile_set.all %}
 
-   <p> {{d.f_name}} ---- <a href="{{d.myfiles.url}}" download=""><img width="50" src="{{d.myfiles.url}}"></p></a>
+   <p> {{uploaded_file.file_name}} ---- <a href="{{uploaded_file.myfiles.url}}" download=""><img width="50" src="{{uploaded_file.myfiles.url}}"></p></a>
 
     {% endfor %}
 
