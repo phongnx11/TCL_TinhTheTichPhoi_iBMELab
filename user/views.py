@@ -78,12 +78,6 @@ class PasswordsResetConfirmView(PasswordResetConfirmView):
 
 
 
-
-@login_required(login_url="login_attempt")
-def home(request):
-    return render(request, 'home.html')
-
-
 def login_attempt(request):
     if request.method == 'POST':
         username = request.POST.get('username')
@@ -109,6 +103,10 @@ def login_attempt(request):
         return redirect('/')
 
     return render(request, 'dangnhap.html')
+
+@login_required(login_url="login_attempt")
+def home(request):
+    return render(request, 'home.html')
 
 
 def register_attempt(request):
