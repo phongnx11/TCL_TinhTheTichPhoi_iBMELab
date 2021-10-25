@@ -20,6 +20,25 @@
 		<script src="{% static 'assets/js/html5shiv.min.js' %}"></script>
 		<script src="{% static 'assets/js/respond.min.js' %}"></script>
 	<![endif]-->
+<style>
+    .button {
+        border: none;
+        color: rgb(10, 223, 28);
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+    body {
+        background-image: url("{% static 'assets/img/backgroundindex3.png' %}");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
 </head>
 
 <body>
@@ -83,15 +102,11 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                        <li class="menu-title">Chính</li>
-						<li>
-
-                            <a href=""><i class="fa fa-upload" aria-hidden="true"></i> <span>Quản lý file</span></a>
-                        </li>
+						
                         <li>
 							<a href=""><i class="fa fa-list" aria-hidden="true"></i> <span>Thống kê lần sử dụng </span> </a>
 
 						</li>
-
                         <li>
                             <a href=""><i class="fa fa-cog"></i> <span>Thiết lập</span></a>
                         </li>
@@ -102,6 +117,10 @@
         <div class="page-wrapper">
             <div class="content">
                 {% block content %}
+               
+                <div class="m-t-20 text-center">
+                    <button class="btn btn-primary submit-btn" ><a href="{% url 'd' %}" style="color: rgb(251, 255, 20);">Tính thể tích phổi</a></button>
+                </div>
 
                 {% endblock %}
             </div>

@@ -1,6 +1,9 @@
 {% extends './index.html' %}
     {% block content %}
         <div class="content">
+            <div class="m-t-20 text-center">
+                <button class="btn btn-primary submit-btn" ><a href="{% url 'display' %}" style="color: rgb(251, 255, 20);">Tính thể tích phổi</a></button>
+            </div>
                         {% if messages %}
 
                         {% for message in messages %}

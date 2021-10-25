@@ -104,7 +104,7 @@ def login_attempt(request):
 
     return render(request, 'dangnhap.html')
 
-@login_required(login_url="login_attempt")
+@login_required(login_url="login")
 def home(request):
     return render(request, 'home.html')
 
