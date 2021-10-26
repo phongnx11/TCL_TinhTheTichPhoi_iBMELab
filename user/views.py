@@ -1,6 +1,4 @@
-from user.models import Profile
 from django.shortcuts import redirect, render
-from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import *
 import uuid
@@ -12,63 +10,86 @@ from django.contrib.auth.views import PasswordChangeView,PasswordResetView,Passw
 from django.contrib.auth.forms import PasswordResetForm,SetPasswordForm
 from django.urls import reverse_lazy
 from .forms import FileFieldForm,PasswordsChangingForm,Path
-from django.views.generic.edit import FormView
-from django.http import HttpResponse
-from django.views import View
-import math
 import numpy as np
 import pydicom
-import os
-import matplotlib.pyplot as plt
-import cv2 as cv
-from glob import glob
-from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-import scipy.ndimage
-from scipy import ndimage
-from skimage.morphology import watershed
-from skimage.feature import peak_local_max
-from skimage import segmentation
-from skimage import morphology
-from skimage import measure
-from skimage.transform import resize
-from sklearn.cluster import KMeans
-from plotly import __version__
-from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-from plotly.tools import FigureFactory as FF
-from plotly.graph_objs import *
 from skimage.morphology import ball, disk, dilation, binary_erosion, remove_small_objects, erosion, closing, reconstruction, binary_closing
-from skimage.measure import label,regionprops, perimeter
-from skimage.morphology import binary_dilation, binary_opening
-from skimage.filters import roberts, sobel
+import scipy.ndimage
+from sklearn.cluster import KMeans
+# import os
+# import matplotlib.pyplot as plt
+# import cv2 as cv
+# from glob import glob
+# from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+# from scipy import ndimage
+# from skimage.morphology import watershed
+# from skimage.feature import peak_local_max
+# from skimage import segmentation
+# from skimage import morphology
+# from skimage import measure
+# from skimage.transform import resize
+# from plotly import __version__
+# from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+# from plotly.tools import FigureFactory as FF
+# from plotly.graph_objs import *
+# from django.views.generic.edit import FormView
+# from django.http import HttpResponse
+# from django.views import View
+# import math
+# from skimage.measure import label,regionprops, perimeter
+# from skimage.morphology import binary_dilation, binary_opening
+# from skimage.filters import roberts, sobel
 from skimage import measure, feature
-from skimage.segmentation import clear_border, mark_boundaries
-from skimage import data
+# from skimage.segmentation import clear_border, mark_boundaries
+# from skimage import data
 from scipy import ndimage as ndi
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+# from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import scipy.misc
 from glob import glob
-from skimage.io import imread
+# from skimage.io import imread
 from datetime import datetime
 import shutil,os
+from user.models import Profile
 from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
 GoogleAuth.DEFAULT_SETTINGS['client_config_file'] ="user/client_secrets.json"
+
+
+
+def check():
+    user=Profile.objects.all()
+    for i in user:
+        if i.time==0:
+            i.is_active=False
+
 
 
 class PasswordsChangeView(PasswordChangeView):
     form_class = PasswordsChangingForm
     success_url = reverse_lazy('password_change_done')
 
+
+
+
 def PasswordChangeDoneView(request):
     return render(request,'password_change_done.html')
+
+
+
+
 
 class PasswordsResetView(PasswordResetView):
     form_class = PasswordResetForm
     success_url = reverse_lazy('password_reset_done')
 
+
+
 def PasswordResetDoneView(request):
     return render(request,'password_reset_done.html')
+
+
+
+
 class PasswordsResetConfirmView(PasswordResetConfirmView):
     form_class = SetPasswordForm
     success_url = reverse_lazy('password_reset_complete')
@@ -83,18 +104,18 @@ def login_attempt(request):
 
         user_obj = User.objects.filter(username=username).first()
         if user_obj is None:
-            messages.success(request, 'Tên người dùng không tồn tại')
+            messages.warning(request, 'Tên người dùng không tồn tại')
             return redirect('/accounts/login')
 
         profile_obj = Profile.objects.filter(user=user_obj).first()
 
         if not profile_obj.is_verified:
-            messages.success(request, 'Tài khoản chưa xác thực vui lòng kiểm tra email')
+            messages.warning(request, 'Tài khoản chưa xác thực vui lòng kiểm tra email')
             return redirect('/accounts/login')
 
         user = authenticate(username=username, password=password)
         if user is None:
-            messages.success(request, 'Sai mật khẩu')
+            messages.error(request, 'Sai mật khẩu')
             return redirect('/accounts/login')
 
         login(request, user)
@@ -102,9 +123,16 @@ def login_attempt(request):
 
     return render(request, 'dangnhap.html')
 
+
+
+
+
 @login_required(login_url="login")
 def home(request):
     return render(request, 'home.html')
+
+
+
 
 
 def register_attempt(request):
@@ -114,11 +142,11 @@ def register_attempt(request):
         password = request.POST.get('password')
         try:
             if User.objects.filter(username=username).first():
-                messages.success(request, 'Tên người dùng để trống hoặc đã tồn tại')
+                messages.warning(request, 'Tên người dùng để trống hoặc đã tồn tại')
                 return redirect('/register')
 
             if User.objects.filter(email=email).first():
-                messages.success(request, 'Email đã tồn tại')
+                messages.warning(request, 'Email đã tồn tại')
                 return redirect('/register')
 
             user_obj = User(username=username, email=email)
@@ -134,12 +162,20 @@ def register_attempt(request):
     return render(request, 'dangki.html')
 
 
+
+
+
 def success(request):
     return render(request, 'success.html')
 
 
+
+
+
 def token_send(request):
     return render(request, 'token_send.html')
+
+
 
 
 def verify(request, auth_token):
@@ -160,13 +196,20 @@ def verify(request, auth_token):
         return redirect('/')
 
 
+
+
 def error_page(request):
     return render(request, 'error.html')
+
+
+
 
 def log_out(request):
     logout(request)
     messages.success(request,'Đăng xuất thành công')
     return redirect('/accounts/login')
+
+
 
 
 def send_mail_after_registration(email, auth_token):
@@ -178,6 +221,10 @@ def send_mail_after_registration(email, auth_token):
 
 # https://accounts.google.com/DisplayUnlockCaptcha
 # https://myaccount.google.com/lesssecureapps?pli=1&rapt=AEjHL4MKvsNPAkDdvjmxFXA3SG6EQk2YWe6JqfK4FVVjvrc3yuVMPlsEqpRqP2bDFwR-vAtiiUVL4sT3xFhWMCMsptJ1EZ_xJw
+
+
+
+@login_required
 def display_file(request):
     request_user = Profile.objects.get(user__id=request.user.id)
     context = {
@@ -185,6 +232,10 @@ def display_file(request):
     }
     return render(request, "display_file.html", context)
 
+
+
+
+@login_required
 def upload_file(request):
     request_user = Profile.objects.get(user__id=request.user.id)
     # user_uploaded_files = UserUploadedFile.objects.all()
@@ -583,6 +634,8 @@ def upload_file(request):
         Result=ResultFile.objects.create(file=UserFile, right_lung=right_mask, left_lung=left_mask, lung_volume=volume)
         Result.save()
         return redirect("/")
+
+
 
 
 def test(request):
