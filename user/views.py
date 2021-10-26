@@ -49,8 +49,6 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import scipy.misc
 from glob import glob
 from skimage.io import imread
-
-
 from datetime import datetime
 import shutil,os
 from pydrive.drive import GoogleDrive
@@ -189,10 +187,8 @@ def display_file(request):
 
 def upload_file(request):
     request_user = Profile.objects.get(user__id=request.user.id)
-    user_uploaded_files = UserUploadedFile.objects.all()
+    # user_uploaded_files = UserUploadedFile.objects.all()
     id=request.user.id
-    for user_uploaded_file in user_uploaded_files:
-        user_uploaded_file.delete()
     if request.method == "POST":
         name = request.POST.get("filename")
         uploaded_files = request.FILES.getlist("uploadfiles")
@@ -203,7 +199,7 @@ def upload_file(request):
         gauth = GoogleAuth()
         drive = GoogleDrive(gauth)
         for uploaded_file in uploaded_files:
-            UserUploadedFile(f_name=name, myfiles=uploaded_file,user=request_user).save()
+            File(f_name=name, myfiles=uploaded_file,user=request_user).save()
         for uploaded_file in uploaded_files:
             uploaded_file_name =str(uploaded_file)
             global server_store_path
@@ -226,8 +222,8 @@ def upload_file(request):
             gfile.SetContentFile(upload_file)
             gfile.Upload()  # Upload the file.
             print('success')
-        folder_contents = UserUploadedFile.objects.all()
-        folder_contents.delete()
+        # folder_contents = UserUploadedFile.objects.all()
+        # folder_contents.delete()
         data_path = server_store_path
         # export result to other folder
         # open dicom files
@@ -582,7 +578,10 @@ def upload_file(request):
         print(patient_lung)
         print(right_lung)
         print(left_lung)
-
+        UserFile=UserUploadedFile.objects.create(user=request_user, drive_id=folder_id)
+        UserFile.save()
+        Result=ResultFile.objects.create(file=UserFile, right_lung=right_mask, left_lung=left_mask, lung_volume=volume)
+        Result.save()
         return redirect("/")
 
 

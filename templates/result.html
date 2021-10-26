@@ -1,0 +1,16 @@
+{% extends './index.html' %}
+    {% block content %}
+        <div class="content">
+            <div class="m-t-20 text-center">
+                <button class="btn btn-primary submit-btn" ><a href="{% url 'display' %}" style="color: rgb(240, 239, 247);">Kết quả</a></button>
+            </div>
+                        {% if messages %}
+
+                        {% for message in messages %}
+                        <div class="alert alert-info">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+        </div>
+    {% endblock %}
