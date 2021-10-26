@@ -6,9 +6,9 @@ class FileFieldForm(forms.Form):
 
 
 class PasswordsChangingForm(PasswordChangeForm):
-    old_password =  forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','type':'password'}))
-    new_password1 = forms.CharField(max_length=100,widget=forms.PasswordInput(attrs={'class':'form-control','type':'password'}))
-    new_password2 = forms.CharField(max_length=100,widget=forms.PasswordInput(attrs={'class':'form-control','type':'password'}))
+    old_password =  forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','type':'password'}),label="Mật Khẩu Cũ")
+    new_password1 = forms.CharField(max_length=100,widget=forms.PasswordInput(attrs={'class':'form-control','type':'password'}),label='Mật Khẩu Mới')
+    new_password2 = forms.CharField(max_length=100,widget=forms.PasswordInput(attrs={'class':'form-control','type':'password'}),label='Xác nhận mật khẩu')
 
     class Meta:
         model = User

@@ -6,10 +6,11 @@
 <!-- index22:59-->
 <head>
     <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Preclinic - Medical & Hospital - Bootstrap 4 Admin Template</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -31,13 +32,16 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-      }
+    }
     body {
         background-image: url("{% static 'assets/img/backgroundindex3.png' %}");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
     }
+    a, H1, H2, .demo-font-chu {
+        font-family: 'Roboto', sans-serif;
+      }
 </style>
 </head>
 
@@ -119,7 +123,7 @@
                 {% block content %}
                
                 <div class="m-t-20 text-center">
-                    <button class="btn btn-primary submit-btn" ><a href="{% url 'd' %}" style="color: rgb(251, 255, 20);">Tính thể tích phổi</a></button>
+                    <button class="btn btn-primary submit-btn" ><a href="{% url 'display' %}" style="color: rgb(251, 255, 20);">Tính thể tích phổi</a></button>
                 </div>
 
                 {% endblock %}
