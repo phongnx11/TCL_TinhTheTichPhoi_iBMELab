@@ -176,6 +176,8 @@ def token_send(request):
     return render(request, 'token_send.html')
 
 
+def result(request):
+    return render(request,'result.html')
 
 
 def verify(request, auth_token):
@@ -247,8 +249,8 @@ def upload_file(request):
         print(urlk)
         Folder='./media/'+urlk
         os.makedirs(Folder)
-        gauth = GoogleAuth()
-        drive = GoogleDrive(gauth)
+        # gauth = GoogleAuth()
+        # drive = GoogleDrive(gauth)
         for uploaded_file in uploaded_files:
             File(f_name=name, myfiles=uploaded_file,user=request_user).save()
         for uploaded_file in uploaded_files:
@@ -257,22 +259,22 @@ def upload_file(request):
             uploaded_file_path ='./media/' + uploaded_file_name
             server_store_path = './media/' + urlk
             shutil.move(uploaded_file_path, server_store_path)
-        entries = os.scandir(Folder)
-        upload_files = []
-        for entry in entries:
-            print(entry.name)
-            k = str(entry.name)
-            upload_files.append(os.path.join(Folder, k))
-        folder_name = urlk
-        folder = drive.CreateFile({'title': folder_name, 'mimeType': 'application/vnd.google-apps.folder'})
-        folder.Upload()
-        print('File ID: %s' % folder.get('id'))
-        folder_id = str(folder.get('id'))
-        for upload_file in upload_files:
-            gfile = drive.CreateFile({'parents': [{'id': folder_id}]})
-            gfile.SetContentFile(upload_file)
-            gfile.Upload()  # Upload the file.
-            print('success')
+        # entries = os.scandir(Folder)
+        # upload_files = []
+        # for entry in entries:
+        #     print(entry.name)
+        #     k = str(entry.name)
+        #     upload_files.append(os.path.join(Folder, k))
+        # folder_name = urlk
+        # folder = drive.CreateFile({'title': folder_name, 'mimeType': 'application/vnd.google-apps.folder'})
+        # folder.Upload()
+        # print('File ID: %s' % folder.get('id'))
+        # folder_id = str(folder.get('id'))
+        # for upload_file in upload_files:
+        #     gfile = drive.CreateFile({'parents': [{'id': folder_id}]})
+        #     gfile.SetContentFile(upload_file)
+        #     gfile.Upload()  # Upload the file.
+        #     print('success')
         # folder_contents = UserUploadedFile.objects.all()
         # folder_contents.delete()
         data_path = server_store_path
@@ -629,7 +631,7 @@ def upload_file(request):
         print(patient_lung)
         print(right_lung)
         print(left_lung)
-        UserFile=UserUploadedFile.objects.create(user=request_user, drive_id=folder_id)
+        UserFile=UserUploadedFile.objects.create(user=request_user, drive_id=0)
         UserFile.save()
         Result=ResultFile.objects.create(file=UserFile, right_lung=right_mask, left_lung=left_mask, lung_volume=volume)
         Result.save()

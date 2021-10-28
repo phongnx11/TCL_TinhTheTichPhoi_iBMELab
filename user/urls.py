@@ -21,6 +21,7 @@ urlpatterns = [
     path("myfile/", display_file,name='display'),
     path('upload/', upload_file, name="upload"),
     path('test/', test,name='test'),
+    path('result/',result,name="result"),
     # path('process/', process, name='pro'),
 
 
