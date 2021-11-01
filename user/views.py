@@ -240,7 +240,7 @@ def display_file(request):
 @login_required
 def upload_file(request):
     request_user = Profile.objects.get(user__id=request.user.id)
-    # user_uploaded_files = UserUploadedFile.objects.all()
+    user_uploaded_files = UserUploadedFile.objects.all()
     id=request.user.id
     if request.method == "POST":
         name = request.POST.get("filename")
@@ -635,7 +635,13 @@ def upload_file(request):
         UserFile.save()
         Result=ResultFile.objects.create(file=UserFile, right_lung=right_mask, left_lung=left_mask, lung_volume=volume)
         Result.save()
-        return redirect("/")
+        context ={
+            'right_lung':make_lungmask,
+            'left_lung':left_mask,
+            'lung_volume':patient_lung
+        }
+        redirect('/result')
+    return render(request,'display_file.html',context)
 
 
 
