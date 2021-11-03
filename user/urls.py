@@ -1,3 +1,4 @@
+from os import name
 from django.contrib import admin
 from django.urls import path
 from .views import *
@@ -22,6 +23,7 @@ urlpatterns = [
     path('upload/', upload_file, name="upload"),
     path('test/', test,name='test'),
     path('result/',result,name="result"),
+    path('statistical/',user_statistical,name="user_statistical"),
     # path('process/', process, name='pro'),
 
 

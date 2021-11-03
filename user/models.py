@@ -37,10 +37,10 @@ class File(models.Model):
 
 
 class ResultFile(models.Model):
-    file=models.ForeignKey(UserUploadedFile, on_delete=models.CASCADE, null=False)
+    upload_file=models.ForeignKey(UserUploadedFile, on_delete=models.CASCADE, null=False)
     right_lung=models.CharField(max_length=20)
     left_lung=models.CharField(max_length=20)
     lung_volume=models.CharField(max_length=20)
     create_at=models.DateTimeField(auto_now_add=True)
     def __str__(self):
-        return str(self.file)
+        return str(self.upload_file)

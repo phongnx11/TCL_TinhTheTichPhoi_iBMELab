@@ -236,6 +236,19 @@ def display_file(request):
 
 
 
+@login_required
+def user_statistical(request):
+    profile = request.user.profile
+    upload_file = UserUploadedFile.objects.filter(user=profile)
+    statistical_results = ResultFile.objects.filter(upload_file__in=upload_file)
+    context = {
+        'statistical_results':statistical_results,
+    }
+    return render(request,"user_statistical.html",context)
+
+def admin_statistical(request):
+    pass
+
 
 @login_required
 def upload_file(request):

@@ -33,12 +33,12 @@
         cursor: pointer;
     }
     body {
-        background-image: url("{% static 'assets/img/backgroundindex4.png' %}");
+        background-image: url("{% static 'assets/img/backgroundindex3.png' %}");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
     }
-    a, H1, H2, .demo-font-chu {
+    a, H1, H2,H3,H4,TH, .demo-font-chu {
         font-family: 'Roboto', sans-serif;
       }
 </style>
@@ -107,7 +107,7 @@
                        <li class="menu-title">Chính</li>
 						
                         <li>
-							<a href=""><i class="fa fa-list" aria-hidden="true"></i> <span>Thống kê lần sử dụng </span> </a>
+							<a href="{% url 'user_statistical' %}"><i class="fa fa-list" aria-hidden="true"></i> <span>Thống kê lần sử dụng </span> </a>
 
 						</li>
                         <li>
