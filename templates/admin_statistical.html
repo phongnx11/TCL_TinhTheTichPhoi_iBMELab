@@ -1,0 +1,151 @@
+{% extends './index.html' %}
+    {% block content %}
+        <div class="content">
+            <div class="page-wrapper">
+                <div class="content">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h4 class="page-title">Thống kế</h4>
+                            <div class="col-sm-7 col-7 text-right m-b-30">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped custom-table mb-0 datatable">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Ten Nguoi Dung</th>
+                                                    <th>So Dien Thoai</th>
+                                                    <th>Trang thai</th>
+                                                    <th class="text-right">Chinh Sua</th>
+                                                </tr>
+                                            </thead>
+                                            
+                                            {% for user in users %} 
+                                            <tbody>
+                                                
+                                                <tr>
+                                                    <td ></td>
+                                                    <td>{{user.user}}</td>
+                                                    <td>{{user.phone}}</td>
+                                                    {% if user.is_verified %}
+                                                    <td><span class="custom-badge status-green">Active</span></td>
+                                                    {% else %}
+                                                    <td><span class="custom-badge status-red">Inactive</span></td>
+                                                    {% endif %}
+                                                    <td class="text-right">
+                                                        <div class="dropdown dropdown-action">
+                                                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-user-cog"></i></a>
+                                                            <div class="dropdown-menu dropdown-menu-right" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(44px, 26px, 0px);" x-out-of-boundaries="">
+                                                            {% if user.is_verified %} 
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#{{user.user}}act" data-whatever= >
+                                                                    <i class="fas fa-user-cog"></i>Tat hoạt động
+                                                                </a>
+                                                            {% else %} 
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#{{user.user}}off" data-whatever= >
+                                                                    <i class="fas fa-user-cog"></i>Bật hoạt động
+                                                                </a>
+                                                            {% endif %}     
+                                                                <a class="dropdown-item" href="#" data-toggle="modal" data-target= "#{{user.user}}"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <div class="modal fade" tabindex="-1" id="{{user.user}}off" aria-labelledby="listLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title"> </h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          <p> Bật hoạt động nguoi dùng {{user.user}}</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <form method="post"  action="{% url 'user_turn_active' user.id %}">
+                                                                {% csrf_token %}
+                                                                <button type="submit" class="btn btn-danger">
+                                                                    <i class="fas fa-power-off"></i>
+                                                                </button>
+                                                            </form>
+                                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="modal fade" tabindex="-1" id="{{user.user}}act" aria-labelledby="listLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title"> </h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          <p>Tat hoạt động nguoi dùng {{user.user}}</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <form method="post"  action="{% url 'user_setrole' user.id %}">
+                                                                {% csrf_token %}
+                                                                <button type="submit" class="btn btn-danger">
+                                                                    <i class="fas fa-power-off"></i>
+                                                                </button>
+                                                            </form>
+                                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="modal fade" tabindex="-1" id="{{user.user}}" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                      <div class="modal-content">
+                                                        <div class="modal-header">
+                                                          <h5 class="modal-title"> </h5>
+                                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          <p>Xac nhan xoa nguoi dung {{user.user}}</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <form method="post"  action="{% url 'delete_user' user.id %}">
+                                                                {% csrf_token %}
+                                                                <button type="submit" class="btn btn-danger">
+                                                                    <i class="fa-solid fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                </div>
+
+
+                                                
+                                            </tbody>  
+                                            
+                                            {% endfor %}
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    
+    
+                </div>
+            </div>
+        </div>
+    {% endblock %}

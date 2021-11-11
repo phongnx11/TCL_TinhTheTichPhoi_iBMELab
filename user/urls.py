@@ -24,6 +24,10 @@ urlpatterns = [
     path('test/', test,name='test'),
     path('result/',result,name="result"),
     path('statistical/',user_statistical,name="user_statistical"),
+    path('admin_statistical/',admin_statistical,name="admin_statistical"),
+    path('delete_user/<int:id>/',detele_user,name='delete_user'),
+    path('user_setrole/<int:id>/',user_setrole,name='user_setrole'),
+    path('user_turn_active/<int:id>/',user_turn_active,name='user_turn_active'),
     # path('process/', process, name='pro'),
 
 

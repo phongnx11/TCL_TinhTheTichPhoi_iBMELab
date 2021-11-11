@@ -10,7 +10,7 @@ class Profile(models.Model):
     is_admin=models.BooleanField(default=False)
     is_normal_user=models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    time=models.IntegerField(default=50)
+    time=models.IntegerField(default=10)
     is_active=models.BooleanField(default=True)
     phone=models.CharField(max_length=10)
     def __str__(self):

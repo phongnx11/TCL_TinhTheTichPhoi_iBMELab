@@ -7,6 +7,7 @@
                         <div class="col-sm-12">
                             <h4 class="page-title">Thống kế</h4>
                             <div class="col-sm-7 col-7 text-right m-b-30">
+                                <h3>So lan da su dung: {{turn}}</h3>
                                 <a href="{% url 'display' %}" class="btn btn-primary btn-rounded btn-right"><i class="fa fa-plus"></i> Tải file </a>
                             </div>
                             <div class="row">
@@ -25,7 +26,7 @@
                                            
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
+                                                    <td>{{statistical_result.id}}</td>
                                                     <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#listFile">Xem file</button></td>
                                                     <td>{{statistical_result.create_at}}</td>
                                                     <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem Chi Tiết</button></td>

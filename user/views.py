@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from .models import *
+from .decorators import admin_only
 import uuid
 from django.conf import settings
 from django.core.mail import send_mail
@@ -198,6 +199,9 @@ def verify(request, auth_token):
         return redirect('/')
 
 
+def error_404_view(request,exception):
+    return render(request,'error404.html')
+
 
 
 def error_page(request):
@@ -241,13 +245,46 @@ def user_statistical(request):
     profile = request.user.profile
     upload_file = UserUploadedFile.objects.filter(user=profile)
     statistical_results = ResultFile.objects.filter(upload_file__in=upload_file)
+    turn = statistical_results.count()
     context = {
         'statistical_results':statistical_results,
+        'turn':turn,
     }
     return render(request,"user_statistical.html",context)
 
+@admin_only
 def admin_statistical(request):
-    pass
+    users = Profile.objects.filter(is_admin=False)
+    turns = []
+    for user in users:
+        upload_file = UserUploadedFile.objects.filter(user=user)
+        statistical_results = ResultFile.objects.filter(upload_file__in=upload_file)
+        count = statistical_results.count()
+        turns.append(count)
+    
+    context = {
+        'users':users,
+        'turns':turns,
+    }
+    return render(request,"admin_statistical.html",context)
+
+
+def user_setrole(request,id):
+    user = Profile.objects.get(pk = id)
+    user.is_verified = False
+    user.save()
+    return redirect('/admin_statistical')
+
+def user_turn_active(request,id):
+    user = Profile.objects.get(pk=id)
+    user.is_verified = True
+    user.save()
+    return redirect('/admin_statistical')
+
+def detele_user(request,id):
+    user = User.objects.get(pk=id)
+    user.delete()
+    return redirect('/admin_statistical')
 
 
 @login_required
@@ -648,11 +685,13 @@ def upload_file(request):
         UserFile.save()
         Result=ResultFile.objects.create(file=UserFile, right_lung=right_mask, left_lung=left_mask, lung_volume=volume)
         Result.save()
+        request_user.time = request_user.time - 1
         context ={
             'right_lung':make_lungmask,
             'left_lung':left_mask,
             'lung_volume':patient_lung
         }
+
         redirect('/result')
     return render(request,'display_file.html',context)
 
