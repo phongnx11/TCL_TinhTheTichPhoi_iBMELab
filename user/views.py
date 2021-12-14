@@ -53,6 +53,7 @@ import shutil,os
 from user.models import Profile
 from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
+from .utils import plot_graph
 GoogleAuth.DEFAULT_SETTINGS['client_config_file'] ="user/client_secrets.json"
 
 
@@ -284,6 +285,7 @@ def user_turn_active(request,id):
 def detele_user(request,id):
     user = User.objects.get(pk=id)
     user.delete()
+    
     return redirect('/admin_statistical')
 
 
@@ -703,3 +705,9 @@ def test(request):
     return render(request, 'test.html',{'f':b})
 
 
+def test_graph(request):
+    graph = plot_graph()
+    context = {
+        'graph':graph,
+    }
+    return render(request,"graph.html",context)
