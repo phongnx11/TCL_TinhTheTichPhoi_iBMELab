@@ -21,8 +21,7 @@ urlpatterns = [
     path('reset/done/',auth_views.PasswordResetCompleteView.as_view(template_name='./password_reset_complete.html'),name='password_reset_complete'),
     path("myfile/", display_file,name='display'),
     path('upload/', upload_file, name="upload"),
-    path('test/', test,name='test'),
-    path('result/',result,name="result"),
+    path('result/<int:id>/',result,name="result"),
     path('statistical/',user_statistical,name="user_statistical"),
     path('admin_statistical/',admin_statistical,name="admin_statistical"),
     path('delete_user/<int:id>/',detele_user,name='delete_user'),
@@ -30,6 +29,5 @@ urlpatterns = [
     path('user_turn_active/<int:id>/',user_turn_active,name='user_turn_active'),
     path('test_graph/',test_graph,name='graph'),
     # path('process/', process, name='pro'),
-
 
 ]

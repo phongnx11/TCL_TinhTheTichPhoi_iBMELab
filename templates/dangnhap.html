@@ -26,6 +26,7 @@
 			<div class="account-center">
 				<div class="account-box">
                     <form action="" method="post">
+                        {% csrf_token %}
                         {% if messages %}
 
                         {% for message in messages %}
@@ -33,9 +34,7 @@
                             {{ message }}
                         </div>
                         {% endfor %}
-
                     {% endif %}
-                        {% csrf_token %}
 						<div class="account-logo">
                             <a href="index-2.html"><img src="{% static 'assets/img/logo-dark.png' %}" alt=""></a>
                         </div>

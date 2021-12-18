@@ -8,3 +8,11 @@ def admin_only(view_func):
         else:
             return HttpResponse("Chức năng này chỉ dành cho Admin!")
     return function
+def user_only(view_func):
+    def function(request, *args, **kwargs):
+        roll=request.user.profile.is_normal_user
+        if roll==True:
+            return view_func(request, *args, **kwargs)
+        else:
+            return HttpResponse("USER")
+    return function

@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 from django.contrib import messages
 from .models import *
-from .decorators import admin_only
+from .decorators import admin_only, user_only
 import uuid
 from django.conf import settings
 from django.core.mail import send_mail
@@ -10,50 +10,24 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import PasswordChangeView,PasswordResetView,PasswordResetConfirmView
 from django.contrib.auth.forms import PasswordResetForm,SetPasswordForm
 from django.urls import reverse_lazy
-from .forms import FileFieldForm,PasswordsChangingForm,Path
+from .forms import PasswordsChangingForm,Path
 import numpy as np
 import pydicom
-from skimage.morphology import ball, disk, dilation, binary_erosion, remove_small_objects, erosion, closing, reconstruction, binary_closing
+from skimage.morphology import disk
 import scipy.ndimage
 from sklearn.cluster import KMeans
-# import os
-# import matplotlib.pyplot as plt
-# import cv2 as cv
-# from glob import glob
-# from mpl_toolkits.mplot3d.art3d import Poly3DCollection
-# from scipy import ndimage
-# from skimage.morphology import watershed
-# from skimage.feature import peak_local_max
-# from skimage import segmentation
-# from skimage import morphology
-# from skimage import measure
-# from skimage.transform import resize
-# from plotly import __version__
-# from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-# from plotly.tools import FigureFactory as FF
-# from plotly.graph_objs import *
-# from django.views.generic.edit import FormView
-# from django.http import HttpResponse
-# from django.views import View
-# import math
-# from skimage.measure import label,regionprops, perimeter
-# from skimage.morphology import binary_dilation, binary_opening
-# from skimage.filters import roberts, sobel
+from  django.contrib.auth.models import User
 from skimage import measure, feature
-# from skimage.segmentation import clear_border, mark_boundaries
-# from skimage import data
+
 from scipy import ndimage as ndi
 import matplotlib.pyplot as plt
-# from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 import scipy.misc
 from glob import glob
-# from skimage.io import imread
 from datetime import datetime
 import shutil,os
 from user.models import Profile
-from pydrive.drive import GoogleDrive
 from pydrive.auth import GoogleAuth
-from .utils import plot_graph
+from .utils import plot_3D
 GoogleAuth.DEFAULT_SETTINGS['client_config_file'] ="user/client_secrets.json"
 
 
@@ -121,14 +95,17 @@ def login_attempt(request):
             return redirect('/accounts/login')
 
         login(request, user)
-        return redirect('/')
-
+        ur=Profile.objects.get(user=user)
+        if ur.is_admin==True:
+            return redirect('admin_statistical')
+        if ur.is_normal_user==True:
+            return redirect('/')
     return render(request, 'dangnhap.html')
 
 
 
 
-
+@user_only
 @login_required(login_url="login")
 def home(request):
     return render(request, 'home.html')
@@ -173,13 +150,10 @@ def success(request):
 
 
 
-
 def token_send(request):
     return render(request, 'token_send.html')
 
 
-def result(request):
-    return render(request,'result.html')
 
 
 def verify(request, auth_token):
@@ -240,18 +214,35 @@ def display_file(request):
     return render(request, "display_file.html", context)
 
 
-
+@user_only
 @login_required
 def user_statistical(request):
-    profile = request.user.profile
-    upload_file = UserUploadedFile.objects.filter(user=profile)
-    statistical_results = ResultFile.objects.filter(upload_file__in=upload_file)
-    turn = statistical_results.count()
-    context = {
-        'statistical_results':statistical_results,
-        'turn':turn,
-    }
-    return render(request,"user_statistical.html",context)
+    id=request.user.id
+    pr=Profile.objects.get(user__id=id)
+    file=UserUploadedFile.objects.filter(user__id=pr.id)
+    return render(request,"user_statistical.html",{'file':file})
+
+@user_only
+@login_required
+def result(request, id):
+    result=ResultFile.objects.get(upload_file__id=id)
+    url=result.url
+    with open('./media/'+url+'/x.txt', 'r') as f:
+        x = f.read()
+    with open('./media/'+url+'/y.txt', 'r') as f:
+        y = f.read()
+    with open('./media/'+url+'/z.txt', 'r') as f:
+        z = f.read()
+    with open('./media/'+url+'/d.txt', 'r') as f:
+        d = f.read()
+    with open('./media/'+url+'/e.txt', 'r') as f:
+        e = f.read()
+    with open('./media/'+url+'/f.txt', 'r') as f:
+        k = f.read()
+    context={'x':x, 'y': y, 'z':z , 'd':d, 'e':e, 'f':k, 'result': result}
+    return render(request,'result.html', context)
+
+
 
 @admin_only
 def admin_statistical(request):
@@ -269,19 +260,20 @@ def admin_statistical(request):
     }
     return render(request,"admin_statistical.html",context)
 
-
+@admin_only
 def user_setrole(request,id):
     user = Profile.objects.get(pk = id)
     user.is_verified = False
     user.save()
     return redirect('/admin_statistical')
-
+@admin_only
 def user_turn_active(request,id):
     user = Profile.objects.get(pk=id)
     user.is_verified = True
     user.save()
     return redirect('/admin_statistical')
 
+@admin_only
 def detele_user(request,id):
     user = User.objects.get(pk=id)
     user.delete()
@@ -290,9 +282,9 @@ def detele_user(request,id):
 
 
 @login_required
+@user_only
 def upload_file(request):
     request_user = Profile.objects.get(user__id=request.user.id)
-    user_uploaded_files = UserUploadedFile.objects.all()
     id=request.user.id
     if request.method == "POST":
         name = request.POST.get("filename")
@@ -685,29 +677,73 @@ def upload_file(request):
         print(left_lung)
         UserFile=UserUploadedFile.objects.create(user=request_user, drive_id=0)
         UserFile.save()
-        Result=ResultFile.objects.create(file=UserFile, right_lung=right_mask, left_lung=left_mask, lung_volume=volume)
+        Result=ResultFile.objects.create(upload_file= UserFile ,right_lung=right_mask, left_lung=left_mask, lung_volume=volume, url=urlk)
         Result.save()
         request_user.time = request_user.time - 1
+        plot=plot_3D(Folder)
+        k1 = len(plot)
+        h1= 3 * k1
+        x1 = y1 = z1 = []
+        d1 = []
+        e1 = []
+        f1 = []
+        i = 0
+        while (i < k1):
+            m = plot[i]
+            x1 = x1 + list(m[:, 0])
+            y1 = y1+ list(m[:, 1])
+            z1 = z1 + list(m[:, 2])
+            i = i + 1
+        j = 0
+        while (j < h1):
+            d1.append(j)
+            e1.append(j + 1)
+            f1.append(j + 2)
+            j = j + 3
+        x2 = open('./media/'+urlk+'/x.txt', 'w')
+        x2.write(str(x1))
+        x2.close()
+        y2 = open('./media/'+urlk+'/y.txt', 'w')
+        y2.write(str(y1))
+        y2.close()
+        z2 = open('./media/'+urlk+'/z.txt', 'w')
+        z2.write(str(z1))
+        z2.close()
+        d2 = open('./media/'+urlk+'/d.txt', 'w')
+        d2.write(str(d1))
+        d2.close()
+        e2 = open('./media/'+urlk+'/e.txt', 'w')
+        e2.write(str(e1))
+        e2.close()
+        f2 = open('./media/'+urlk+'/f.txt', 'w')
+        f2.write(str(f1))
+        f2.close()
         context ={
-            'right_lung':make_lungmask,
+            'right_lung': right_mask,
             'left_lung':left_mask,
-            'lung_volume':patient_lung
+            'lung_volume':volume,
+            'x': x1, 'y': y1, 'z': z1, 'd': d1, 'e': e1, 'f': f1
         }
-
+        # context = {}
+        # return render(request, 'plot/plot.html', context)
         redirect('/result')
+
     return render(request,'display_file.html',context)
 
 
 
-
-def test(request):
-    b = Path()
-    return render(request, 'test.html',{'f':b})
-
-
 def test_graph(request):
-    graph = plot_graph()
+    graph = plot_3D()
     context = {
         'graph':graph,
     }
-    return render(request,"graph.html",context)
+    return render(request,"graph.html", context)
+
+def getUser(request):
+    user=Profile.objects.all()
+    return render(request, 'all_user.html', {'us': user})
+
+
+
+
+
