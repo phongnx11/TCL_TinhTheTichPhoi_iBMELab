@@ -16,9 +16,9 @@
                         <div class="col-md-12">
                             <div class="card-box">
                                 <h2 class="card-title">Các thông số của phổi</h2>
-                                <h3>Thể tích phổi trái: {{result.left_lung}} mm</h3>
-                                <h3>Thể tích phổi phải: {{result.right_lung}} mm </h3>
-                                <h3>Thể tích toàn phổi: {{result.lung_volume}} mm</h3>
+                                <h3>Thể tích phổi trái: {{left_lung}} mm</h3>
+                                <h3>Thể tích phổi phải: {{right_lung}} mm </h3>
+                                <h3>Thể tích toàn phổi: {{lung_volume}} mm</h3>
                                 
                             </div>
                         </div>
@@ -26,7 +26,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card-box">
-                                <h4 class="card-title">Mo Hinh 3D Cay Khi Quan</h4>
+                                <h4 class="card-title">Mô hình 3D lá phổi</h4>
                                 	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
                             </div>
                         </div>
@@ -37,9 +37,9 @@
 <script>
     var data = [{
         type: "mesh3d",
-        x: {{x}},
+        z: {{x}},
         y: {{y}},
-        z: {{z}},
+        x: {{z}},
         i: {{d}},
         j: {{e}},
         k: {{f}},
@@ -55,9 +55,12 @@
 	  autosize: false,
 	  width: 1000,
 	  height: 1000,
+	  xaxis: {
+      autorange: "reversed",
+      },
 	  margin: {
-		l: 50,
-		r: 50,
+		l: 100,
+		r: 100,
 		b: 100,
 		t: 100,
 		pad: 4

@@ -37,10 +37,6 @@
 											<span class="avatar">
 												<img alt="John Doe" src="{% static 'assets/img/user.jpg' %}" class="img-fluid">
 											</span>
-											<div class="media-body">
-												<p class="noti-details"><span class="noti-title">John Doe</span> added new task <span class="noti-title">Patient appointment booking</span></p>
-												<p class="noti-time"><span class="notification-time">4 mins ago</span></p>
-											</div>
                                         </div>
                                     </a>
                                 </li>
@@ -75,7 +71,7 @@
                     <ul>
                        <li class="menu-title">Chính</li>
                         <li>
-							<a href=""><i class="fa fa-list" aria-hidden="true"></i> <span>Thống kê lần sử dụng </span> </a>
+							<a href="{% url 'user_statistical' %}"><i class="fa fa-list" aria-hidden="true"></i> <span>Thống kê lần sử dụng </span> </a>
 
 						</li>
 
@@ -90,7 +86,7 @@
             <div class="content">
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
-                        <h4 class="page-title">Upload File </h4>
+                        <h4 class="page-title">Upload Folder </h4>
                     </div>
                 </div>
                 <div class="row">
@@ -112,7 +108,7 @@
                         <p> {{uploaded_file.file_name}} ---- <a href="{{uploaded_file.myfiles.url}}" download=""><img width="50" src="{{uploaded_file.myfiles.url}}"></p></a>
 
                         {% endfor %}
-                        <small class="form-text text-muted">Tệp tải lên tối đa: 50 MB. Định dạng ảnh: DICOM</small>
+                        <small class="form-text text-muted">Tải lên Folder, định dạng File trong Folder: DICOM</small>
                         <div class="m-t-20 text-center">
                             <button class="btn btn-primary submit-btn" type="submit">Tải lên</button>
                         </div>
