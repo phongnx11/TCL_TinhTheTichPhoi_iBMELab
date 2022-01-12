@@ -4,23 +4,143 @@
     <list default="true" id="800938f8-9201-490f-b5fb-079d5f52a252" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/fullimages_1.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165863.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165865.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165866.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165867.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165868.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165869.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165870.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165871.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165872.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165873.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165874.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165875.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165876.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165877.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165878.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165879.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165880.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165881.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165882.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165883.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165884.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165885.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165886.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165887.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165888.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165889.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165890.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165891.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165892.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165893.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165894.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165895.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165896.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165897.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165898.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165899.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165900.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165901.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165902.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165903.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165904.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165905.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165906.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165907.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165908.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165909.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165910.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165911.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165912.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165913.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165914.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165915.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165916.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165917.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165918.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165919.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165920.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165921.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165922.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165923.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165924.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/d.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/e.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/f.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/x.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/y.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/20221112345232/z.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165863.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165865.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165866.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165867.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165868.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165869.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165870.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165871.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165872.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165873.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165874.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165875.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165876.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165877.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165878.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165879.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165880.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165881.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165882.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165883.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165884.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165885.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165886.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165887.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165888.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165889.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165890.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165891.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165892.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165893.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165894.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165895.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165896.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165897.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165898.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165899.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165900.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165901.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165902.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165903.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165904.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165905.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165906.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165907.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165908.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165909.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165910.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165911.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165912.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165913.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165914.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165915.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165916.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165917.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165918.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165919.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165920.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165921.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165922.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165923.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/1.3.12.2.1107.5.1.4.83610.30000020120513590324800165924.dcm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/d.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/e.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/f.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/x.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/y.npy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/2022112021192/z.npy" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mediafullimages_1.npy" beforeDir="false" afterPath="$PROJECT_DIR$/mediafullimages_1.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_statistical.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_statistical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dangki.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dangki.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dangnhap.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dangnhap.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/display_file.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/display_file.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/password_reset_confirm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/password_reset_done.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/password_reset_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/result.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_statistical.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_statistical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/decorators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
