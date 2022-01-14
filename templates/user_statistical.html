@@ -1,32 +1,53 @@
 {% extends './index.html' %}
     {% block content %}
         <div class="content">
-            <div class="page-wrapper">
+
                 <div class="content">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <h4 class="page-title">Thống kê</h4>
+                        <div class="col-sm-12 ">
+
                             <div class="col-sm-7 col-7 text-right m-b-30">
-                                <h3>Số lần đã sử dụng:</h3>
-                                <a href="{% url 'display' %}" class="btn btn-primary btn-rounded btn-right"><i class="fa fa-plus"></i> Tải file mới</a>
-                            </div>
+                                <h3 style="color: #fff;
+    background-color: rgb(0,158,251);
+    margin-right: 8px;
+    width: 240px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 37px;
+    weight:300;
+    margin-left: 500px;">Số lần đã sử dụng :</h3></div>
+    <a href="{% url 'display' %}" style="position: relative;
+    top: -70px;
+    height: 37px;
+    text-align: center;
+    line-height: 25px;
+    left:200px;
+    font-size: 18px;" class="btn btn-primary btn-rounded btn-right"><i style="font-size:10px;
+    position: relative;
+    top: -2px;" class="fa fa-plus"></i> Tải file </a>
+
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="table-responsive">
-                                        <table class="table table-striped custom-table mb-0 datatable">
+                                        <table style="width: 70%;
+    position: relative;
+    left: 12%;" class="table table-striped custom-table mb-0 datatable">
                                             <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>File</th>
-                                                    <th>Thời Gian</th>
-                                                    <th>Kết Quả</th>
+                                                    <tr>
+                                                    <th style="width:150px">Số thự tự</th>
+                                                    <th style="width:150px">File</th>
+                                                    <th style="width:400px">Thời gian</th>
+                                                    <th style="width:80px">Kết Quả</th>
+
                                                 </tr>
                                             </thead>
                                             {% for statistical_result in file %}
-                                           
+
                                             <tbody>
                                                 <tr>
-                                                    <td>{{statistical_result.id}}</td>
+                                                    <td style="min-width:20px;">
+                                                    <small class="text-muted">{{ forloop.counter }}</small>
+                                                    </td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -36,17 +57,18 @@
                                                         </div>
                                                     </td>
                                                     <td>{{statistical_result.create_at}}</td>
-                                                    <td class="text-right">
-                                                        <div class="dropdown dropdown-action">
-                                                            <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                                            <div class="dropdown-menu dropdown-menu-right">
-                                                                <a class="dropdown-item" href="{% url 'result' statistical_result.id  %}"><i class="fa fa-pencil m-r-5"></i> Xem chi tiết</a>
-                                                            </div>
-                                                        </div>
+                                                    <td>
+                                                        <a href="{% url 'result' statistical_result.id  %}">
+                                                        <button style="border: none;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(0,158,251);
+    border-radius: 5px;">Xem chi tiết</button>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </tbody>
-                                           
+
                                             {% endfor %}
                                         </table>
                                     </div>

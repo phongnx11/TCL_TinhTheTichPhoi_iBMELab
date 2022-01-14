@@ -1,11 +1,14 @@
 {% extends './index1.html' %}
     {% block content %}
-        <div class="content">
-            <div class="page-wrapper">
-                <div class="content">
+<div class="container-admin">
                     <div class="row">
                         <div class="col-sm-12">
-                            <h4 class="page-title">Thống kê</h4>
+                            <h4 style="    background-color: rgb(0,158,251);
+    width: 300px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    line-height: 36px;" class="page-title">Danh sách người dùng</h4>
                             <div class="col-sm-7 col-7 text-right m-b-30">
                             </div>
                             <div class="row">
@@ -14,7 +17,7 @@
                                         <table class="table table-striped custom-table mb-0 datatable">
                                             <thead>
                                                 <tr>
-                                                    <th>#</th>
+                                                    <th>STT</th>
                                                     <th>Tên Người Dùng</th>
                                                     <th>Số Điện Thoại</th>
                                                     <th>Trạng Thái</th>
@@ -136,7 +139,5 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+</div>
     {% endblock %}

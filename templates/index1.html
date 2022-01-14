@@ -16,6 +16,9 @@
     <link rel="stylesheet" type="text/css" href="{% static 'assets/css/font-awesome.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;1,600&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!--[if lt IE 9]>
 		<script src="{% static 'assets/js/html5shiv.min.js' %}"></script>
@@ -34,14 +37,22 @@
         cursor: pointer;
     }
     body {
-        background-image: url("{% static 'assets/img/backgroundindex3.png' %}");
+        background-image: url("{% static 'assets/img/' %}");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
     }
+    *{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight : 700;
+    }
     a, H1, H2,H3,H4,TH, .demo-font-chu {
         font-family: 'Roboto', sans-serif;
       }
+    .container-admin{
+        width:80%;
+        margin-left:120px;
+        }
 </style>
 </head>
 
