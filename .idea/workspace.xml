@@ -1,70 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="800938f8-9201-490f-b5fb-079d5f52a252" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102280.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102281.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102282.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102283.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102284.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102285.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102286.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102287.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102288.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102289.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102290.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102291.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102292.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102293.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102294.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102295.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102296.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102297.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102298.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102299.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102300.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102301.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102302.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/d.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/e.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/f.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/x.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/y.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/20221141226402/z.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102280.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102281.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102282.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102283.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102284.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102285.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102286.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102287.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102288.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102289.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102290.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102291.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102292.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102293.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102294.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102295.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102296.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102297.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102298.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102299.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102300.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102301.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/1.3.12.2.1107.5.1.4.83610.30000020120218321811600102302.dcm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/d.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/e.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/f.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/x.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/y.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/2022123112312/z.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mediafullimages_1.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testfullimages_1.npy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/migrations/0001_initial.py" beforeDir="false" />
-    </list>
+    <list default="true" id="800938f8-9201-490f-b5fb-079d5f52a252" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
