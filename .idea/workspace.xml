@@ -4,127 +4,12 @@
     <list default="true" id="800938f8-9201-490f-b5fb-079d5f52a252" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/demo/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mediafullimages_1.npy" beforeDir="false" afterPath="$PROJECT_DIR$/mediafullimages_1.npy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/dataTables.bootstrap4.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/fullcalendar.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/tagsinput.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont3e6e.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont3e6e.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont3e6e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont3e6e.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfont3e6e.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/fonts/fontawesome-webfontd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/attachment.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/backgroud2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/background1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/background3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/backgroundindex.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/backgroundindex2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/backgroundindex3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/backgroundindex4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-thumb-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-thumb-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-thumb-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/blog/blog-thumb-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/calander.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/clock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/doctor-thumb-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logo-dark.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/logo1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/patient-thumb-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/patient-thumb-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/placeholder-thumb.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/placeholder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/sent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/user-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/user-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/user-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/user-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/user-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/user.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/img/video-call.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/Chart.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/dataTables.bootstrap4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/fullcalendar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery-ui.min.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.dataTables.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.fullcalendar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/jquery.slimscroll.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/select2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/js/tagsinput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/css/lightgallery.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/fonts/lgd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/fonts/lgd641.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/fonts/lgd641.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/fonts/lgd641.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/fonts/lgd641.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/img/video-play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/img/vimeo-play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/img/youtube-play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/light-gallery/js/lightgallery-all.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/summernote/dist/font/summernote4c4d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/summernote/dist/font/summernote4c4d.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/summernote/dist/font/summernote4c4d.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/summernote/dist/font/summernoted41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/summernote/dist/summernote-bs4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/plugins/summernote/dist/summernote-bs4.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/.idea/templates.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_statistical.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dangki.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dangnhap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/display_file.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error404.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/graph.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_change.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_change_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_complete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_confirm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_email.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/password_reset_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/result.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/success.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/token_send.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/user_statistical.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
